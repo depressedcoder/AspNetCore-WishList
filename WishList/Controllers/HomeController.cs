@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 
-public class HomeCortroller : Controller{
-    public IActionResult Index()
+namespace WishList
+{
+    public class HomeCortroller : Controller
     {
-        return View();
-    }
-    public IActionResult Error()
-    {
-        return View();
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Error()
+        {
+            return View();
+        }
     }
 }
