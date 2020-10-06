@@ -4,7 +4,7 @@ using WishList.Models;
 
 namespace WishList.Controllers
 {
-    public class ItemController : Controllers
+    public class ItemController : Controller
     {
         private readonly  ApplicationDbContext _context;
         public ItemController(ApplicationDbContext _context)
@@ -25,12 +25,12 @@ namespace WishList.Controllers
         {
             _context.Items.Add(item);
             _context.SaveChanges();
-            return RedirectToActionResult("Index");
+            return RedirectToAction("Index");
         }
         [HttpDelete]
         public IActionResult Delete(int Id)
         {
-            
+           return RedirectToAction("Index");
         }
     }
 }
